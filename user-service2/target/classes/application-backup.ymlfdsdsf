@@ -1,0 +1,28 @@
+server:
+  port: 8001
+
+spring:
+    application:
+      name: user-service
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        dialect: org.hibernate.dialect.MySQLDialect
+        url: jdbc:mysql://db-mysql-lon1-84444-do-user-14233705-0.b.db.ondigitalocean.com:25060/user-service?ssl-mode=REQUIRED
+        username: aidan
+        password: AVNS_eCbF90hsj_W7kPlySH7
+        hikari:
+            initialization-fail-timeout: 0
+    jpa:
+        databasePlatform: org.hibernate.dialect.MySQLDialect
+        generate-ddl: true
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+logging:
+    level:
+        org.hibernate.SQL: DEBUG
+        org.hibernate.type: TRACE
+
+springdoc:
+     api-docs:
+         path: /api-docs
