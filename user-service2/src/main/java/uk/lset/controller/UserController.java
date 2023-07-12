@@ -22,7 +22,13 @@ import uk.lset.service.UserService;
 public class UserController {
 	@Autowired
 	private UserService userService;
-
+	
+	@GetMapping("/hello")
+	private String hello() {
+		return "hello!!";
+	}
+	
+	
 	@GetMapping("/user/all")
 	private List<User> getAllUsers() {
 		return userService.getAllUsers();
